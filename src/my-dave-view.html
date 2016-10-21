@@ -1,0 +1,37 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+
+<dom-module id="my-dave-view">
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style>
+      :host {
+        display: block;
+        color: darkmagenta;
+        padding: 16px;
+      }
+    </style>
+
+    <h1>New Le Petit Dhaus View</h1>
+    <paper-slider min="-100" max="100" value="50"></paper-slider>
+    <style>
+      google-map {
+        height: 600px;
+      }
+    </style>
+    <google-map latitude="10.691956" longitude="-71.681006" api-key="AIzaSyCijl1_vpH9jzoS3EqqPFz5O4nJ0vHQQUg" fit-to-markers>
+      
+      <google-map-marker latitude="10.672869" longitude="-71.648337"
+      draggable="true" title="Dale rapiños!"></google-map-marker>
+      <google-map-marker latitude="10.37777" longitude="-71.38911"></google-map-marker>
+    </google-map>
+    
+
+  </template>
+  <!-- Creates the element's prototype and registers it -->
+  <script>
+    Polymer({
+      is: 'my-dave-view'
+    });
+  </script>
+</dom-module>
